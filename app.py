@@ -8,7 +8,7 @@ app.config["admin_email"] = "benjamin.glick@ge.com"
 app.secret_key = b'\x9b4\xf8%\x1b\x90\x0e[?\xbd\x14\x7fS\x1c\xe7Y\xd8\x1c\xf9\xda\xb0K=\xba'
 # I will obviously change this secret key before we go live
 
-svc_list = {"jupyter": "https://jupyter.datasci.watzek.cloud"}
+svc_list = {"jupyter": "https://jupyter.datasci.watzek.cloud", "Datasci Home": "https://datasci.watzek.cloud"}
 
 @app.route('/')
 @app.route('/index')
@@ -28,7 +28,7 @@ def hello_world():
 
 
 def get_status(service):
-    if urllib.request.urlopen("https://jupyter.datasci.watzek.cloud").getcode() == 200:
+    if urllib.request.urlopen(service).getcode() == 200:
         return 'up'
     else:
         return 'down'
