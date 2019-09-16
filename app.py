@@ -15,7 +15,7 @@ svc_list = {
     "ezproxy": "https://library.lcproxy.org",
     "William Stafford Archive":"http://williamstaffordarchives.org",
     "AccessCeramics": "http://accessceramics.org",
-    "Oregon Poetic Voices": "http://oregonpoeticvoices.org"
+    "Oregon Poetic Voices": "http://oregonpoeticvoices.org",
     "Watzek Server (watzek.lclark.edu)": "https://watzek.lclark.edu",
     "Library Homepage (library.lclark.edu)": "https://library.lclark.edu",
     "Vietnam Project": "https://vietnam.watzekdi.net",
