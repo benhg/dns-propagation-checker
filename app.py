@@ -12,7 +12,6 @@ svc_list = {
     "jupyter": "https://jupyter.datasci.watzek.cloud",
     "Datasci Home": "https://datasci.watzek.cloud",
     "Datasci RStudio": "https://rstudio.datasci.watzek.cloud",
-    "status": "https://status.watzek.cloud",
     "ezproxy": "https://library.lcproxy.org"}
 
 
