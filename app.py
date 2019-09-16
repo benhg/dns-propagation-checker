@@ -27,7 +27,8 @@ svc_list = {
     "Special Collections": "http://specialcollections.lclark.edu",
     "DataViz Server": "https://viz.datasci.watzek.cloud",
     "TEST_nonrespond":"http://TEST_nonrespond.biz.ru",
-
+    "TEST_500error":"http://httpstat.us/500",
+    "TEST_404error":"http://httpstat.us/404",
     }
 
 
