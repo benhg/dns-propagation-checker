@@ -12,7 +12,17 @@ svc_list = {
     "jupyter": "https://jupyter.datasci.watzek.cloud",
     "Datasci Home": "https://datasci.watzek.cloud",
     "Datasci RStudio": "https://rstudio.datasci.watzek.cloud",
-    "ezproxy": "https://library.lcproxy.org"}
+    "ezproxy": "https://library.lcproxy.org",
+    "William Stafford Archive":"http://williamstaffordarchives.org",
+    "AccessCeramics": "http://accessceramics.org",
+    "Oregon Poetic Voices": "http://oregonpoeticvoices.org"
+    "Watzek Server (watzek.lclark.edu)": "https://watzek.lclark.edu",
+    "Library Homepage (library.lclark.edu)": "https://library.lclark.edu",
+    "Vietnam Project": "https://vietnam.watzekdi.net",
+    "Senior Projects":"https://watzek.lclark.edu/seniorprojects/",
+    "LC Collaborative Research": "http://collaborativeresearch.lclark.edu",
+    "Special Collections": "http://specialcollections.lclark.edu",
+    }
 
 
 @app.route('/')
