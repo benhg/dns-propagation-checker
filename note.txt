@@ -1,11 +1,5 @@
-<!-- <tr>
-      <th class="pride-header" id="Logan-concern">Datasci Home</th>
-      <td class="pride {{ status['mayo']['ping'] }}" id="Giacomo-pride">{{ status['mayo']['ping'] }}</td>
-  </tr>
-  <th class="pride-header" id="Logan-concern">Datasci RStudio</th>
+<!-- 
   
-  <td class="pride {{ status['mayo']['ssh'] }}" id="Giacomo-pride">{{ status['mayo']['ssh'] }}</td>
-  </tr>
   <tr>
   <th class="pride-header" id="Logan-concern">Status Page</th>
   <td class="pride {{ status['mayo']['sge'] }}" id="Giacomo-pride">{{ status['mayo']['sge'] }}</td>
