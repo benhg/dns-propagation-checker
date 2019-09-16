@@ -21,7 +21,7 @@ svc_list = {"jupyter": "https://jupyter.datasci.watzek.cloud"}
 def hello_world():
     """Home Page"""
     status = {}
-    for service in services_list.keys():
+    for service in svc_list.keys():
         status[service]= get_status(svc_list[service])
 
     return render_template("status.html", status=status)
