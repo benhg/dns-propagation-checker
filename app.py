@@ -25,7 +25,7 @@ svc_list = {
     "Senior Projects":"https://watzek.lclark.edu/seniorprojects/",
     "LC Collaborative Research": "http://collaborativeresearch.lclark.edu",
     "Special Collections": "http://specialcollections.lclark.edu",
-    "DataViz Server": "https://viz.datasci.watzek.cloud"
+    "DataViz Server": "https://viz.datasci.watzek.cloud",
     "TEST_nonrespond":"TEST_nonrespond.biz.ru",
 
     }
