@@ -2,6 +2,9 @@ from flask import Flask, render_template
 
 import urllib.request
 
+from urllib.error import HTTPError, URLError
+import socket
+
 app = Flask(__name__)
 
 app.config["admin_email"] = "benjamin.glick@ge.com"
@@ -23,6 +26,8 @@ svc_list = {
     "LC Collaborative Research": "http://collaborativeresearch.lclark.edu",
     "Special Collections": "http://specialcollections.lclark.edu",
     "DataViz Server": "https://viz.datasci.watzek.cloud"
+    "TEST_nonrespond":"TEST_nonrespond.biz.ru",
+
     }
 
 
@@ -44,7 +49,20 @@ def hello_world():
 
 
 def get_status(service):
-    if urllib.request.urlopen(service).getcode() == 200:
-        return 'up'
-    else:
+    try:
+        response = urllib.request.urlopen(url, timeout=1).getcode()
+    except (HTTPError, URLError) as error:
         return 'down'
+    except timeout:
+        return 'down'
+    else:
+        if response == 200:
+            return 'up'
+        else:
+            return 'down'
+
+
+
+
+
+
