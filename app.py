@@ -26,7 +26,7 @@ svc_list = {
     "LC Collaborative Research": "http://collaborativeresearch.lclark.edu",
     "Special Collections": "http://specialcollections.lclark.edu",
     "DataViz Server": "https://viz.datasci.watzek.cloud",
-    "TEST_nonrespond":"TEST_nonrespond.biz.ru",
+    "TEST_nonrespond":"http://TEST_nonrespond.biz.ru",
 
     }
 
@@ -50,7 +50,7 @@ def hello_world():
 
 def get_status(service):
     try:
-        response = urllib.request.urlopen(service, timeout=1).getcode()
+        response = urllib.request.urlopen(service, timeout=.5).getcode()
     except (HTTPError, URLError) as error:
         return 'down'
     except timeout:
