@@ -1,9 +1,6 @@
 from flask import Flask, render_template
 import requests
 
-import urllib.request
-from urllib.error import HTTPError, URLError
-from socket import timeout
 import json
 
 from common_stuff import get_status, svc_list

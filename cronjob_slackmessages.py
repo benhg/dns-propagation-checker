@@ -1,9 +1,7 @@
 #!/usr/local/bin/env python3
 
-import urllib.request
-from urllib.error import HTTPError, URLError
-from socket import timeout
 import json
+
 import requests
 
 from common_stuff import get_status, svc_list
@@ -18,9 +16,6 @@ def check_statuses():
         if get_status(svc_list[service]) == 'down':
             message = "Service '{}' is currently Down. Check URL: {}.".format(service, svc_list[service])
             requests.post(slack_webhook_link, headers={'Content-type': 'application/json'}, data=json.dumps({"text": message}))
-
-
-
 
 
 if __name__ == '__main__':
