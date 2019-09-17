@@ -55,7 +55,7 @@ def hello_world():
 def status_breakdown():
     for service in svc_list.keys():
         status = get_status(svc_list[service])
-        message = "Service '{}' is currently {}. Check URL {} for more info".format(service, status, svc_list["service"])
+        message = "Service '{}' is currently {}. Check URL {} for more info".format(service, status, svc_list[service])
         requests.post(slack_webhook_link, data={"text": message})
 
 
