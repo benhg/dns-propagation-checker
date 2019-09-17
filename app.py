@@ -56,7 +56,7 @@ def status_breakdown():
     for service in svc_list.keys():
         status = get_status(svc_list[service])
         message = "Service '{}' is currently {}. Check URL {} for more info".format(service, status, svc_list[service])
-        requests.post(slack_webhook_link, headers={'Content-type: application/json'}, data={"text": message})
+        requests.post(slack_webhook_link, headers={'Content-type': 'application/json'}, data=json.dumps({"text": message}))
         return ""
 
 
