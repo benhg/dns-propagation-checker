@@ -1,15 +1,18 @@
 from flask import Flask, render_template
 
 import urllib.request
-
 from urllib.error import HTTPError, URLError
 from socket import timeout
+import requests
 
 app = Flask(__name__)
 
 app.config["admin_email"] = "benjamin.glick@ge.com"
 app.secret_key = b'\x9b4\xf8%\x1b\x90\x0e[?\xbd\x14\x7fS\x1c\xe7Y\xd8\x1c\xf9\xda\xb0K=\xba'
 # I will obviously change this secret key before we go live
+
+slack_webhook_link = "https://hooks.slack.com/services/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"
+
 
 svc_list = {
     "jupyter": "https://jupyter.datasci.watzek.cloud",
@@ -47,6 +50,13 @@ def hello_world():
         status[service] = get_status(svc_list[service])
 
     return render_template("status.html", status=status)
+
+@app.route("/status_update")
+def status_breakdown():
+    for service in svc_list.keys():
+        status = get_status(svc_list[service])
+        message = "Service '{}' is currently {}. Check URL {} for more info".format(service, status, svc_list["service"])
+        requests.post(slack_webhook_link, data={"text": message})
 
 
 def get_status(service):
