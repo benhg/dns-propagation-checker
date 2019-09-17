@@ -6,8 +6,7 @@ from urllib.error import HTTPError, URLError
 from socket import timeout
 import json
 
-from common_stuff import get_status
-from common_stuff import svc_list
+from common_stuff import get_status, svc_list
 
 app = Flask(__name__)
 
