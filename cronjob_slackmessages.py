@@ -38,7 +38,7 @@ def check_statuses():
 
 def get_status(service):
     try:
-        response = urllib.request.urlopen(service, timeout=3).getcode()
+        response = urllib.request.urlopen(service, timeout=5).getcode()
     except (HTTPError, URLError) as error:
         return 'down'
     except timeout:
