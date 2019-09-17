@@ -16,10 +16,10 @@ def get_status(service):
             return 'down'
 
 svc_list = {
-    "jupyter": "https://jupyter.datasci.watzek.cloud",
+    "Datasci Jupyter": "https://jupyter.datasci.watzek.cloud",
     "Datasci Home": "https://datasci.watzek.cloud",
     "Datasci RStudio": "https://rstudio.datasci.watzek.cloud",
-    "ezproxy": "https://library.lcproxy.org",
+    "EZProxy": "https://library.lcproxy.org",
     "William Stafford Archive":"http://williamstaffordarchives.org",
     "AccessCeramics": "http://accessceramics.org",
     "Oregon Poetic Voices": "http://oregonpoeticvoices.org",
