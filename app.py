@@ -51,12 +51,13 @@ def hello_world():
 
     return render_template("status.html", status=status)
 
-@app.route("/status_update")
+@app.route("/status_update", methods=["GET", "POST"])
 def status_breakdown():
     for service in svc_list.keys():
         status = get_status(svc_list[service])
         message = "Service '{}' is currently {}. Check URL {} for more info".format(service, status, svc_list[service])
         requests.post(slack_webhook_link, data={"text": message})
+        return ""
 
 
 def get_status(service):
