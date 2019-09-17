@@ -1,3 +1,7 @@
+import urllib.request
+from urllib.error import HTTPError, URLError
+from socket import timeout
+
 def get_status(service):
     try:
         response = urllib.request.urlopen(service, timeout=3).getcode()
