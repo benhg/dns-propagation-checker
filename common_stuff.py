@@ -2,6 +2,8 @@ import urllib.request
 from urllib.error import HTTPError, URLError
 from socket import timeout
 
+slack_webhook_link = "https://hooks.slack.com/services/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"
+
 def get_status(service):
     try:
         response = urllib.request.urlopen(service, timeout=3).getcode()
