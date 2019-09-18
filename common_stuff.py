@@ -4,9 +4,9 @@ from socket import timeout
 
 slack_webhook_link = "https://hooks.slack.com/services/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"
 
-def get_status(service):
+def get_status(service, to=3):
     try:
-        response = urllib.request.urlopen(service, timeout=3).getcode()
+        response = urllib.request.urlopen(service, timeout=to).getcode()
     except (HTTPError, URLError) as error:
         return 'down'
     except timeout:

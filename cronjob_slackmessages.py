@@ -4,9 +4,8 @@ import json
 
 import requests
 
-from common_stuff import get_status, svc_list
+from common_stuff import get_status, svc_list, slack_webhook_link
 
-slack_webhook_link = "https://hooks.slack.com/services/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"
 
 
 def check_statuses():
