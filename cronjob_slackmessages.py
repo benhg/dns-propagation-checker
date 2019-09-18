@@ -13,7 +13,7 @@ def check_statuses():
     """Home Page"""
     status = {}
     for service in svc_list.keys():
-        if get_status(svc_list[service]) == 'down':
+        if get_status(svc_list[service], to=10) == 'down':
             message = "Service '{}' is currently Down. Check URL: {}.".format(service, svc_list[service])
             requests.post(slack_webhook_link, headers={'Content-type': 'application/json'}, data=json.dumps({"text": message}))
 

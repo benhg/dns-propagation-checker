@@ -2,9 +2,9 @@ import urllib.request
 from urllib.error import HTTPError, URLError
 from socket import timeout
 
-def get_status(service):
+def get_status(service, to=3):
     try:
-        response = urllib.request.urlopen(service, timeout=3).getcode()
+        response = urllib.request.urlopen(service, timeout=to).getcode()
     except (HTTPError, URLError) as error:
         return 'down'
     except timeout:
