@@ -32,5 +32,6 @@ svc_list = {
     "LC Collaborative Research": "http://collaborativeresearch.lclark.edu",
     "Special Collections": "http://specialcollections.lclark.edu",
     "DataViz Server": "https://viz.datasci.watzek.cloud",
-    "LC PhysX": "https://lcphysx.lclark.edu"
+    "LC PhysX": "https://lcphysx.lclark.edu",
+    "Femto Blog": "https://femto.blog",
     }
