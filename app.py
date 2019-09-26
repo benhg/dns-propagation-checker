@@ -10,13 +10,14 @@ from socket import timeout
 svr_list = {
     "Google": "8.8.8.8",
     "GoDaddy": "ns1.domaincontrol.com",
-    "LClark":"ns1.lclark.edu",
+    "LClark":"149.175.1.2",
     "OpenDNS":"208.67.222.222",
     "CloudFlare":"1.1.1.1",
     "Norton ConnectSafe":"199.85.126.10",
     "Comodo SecureDNS":"8.26.56.26",
     "Quad9":"9.9.9.9",
     "Verisign":"64.6.64.6",
+    "Reclaim Hosting":"192.241.226.68",
     }
 
 
@@ -51,10 +52,15 @@ def hello_world():
 
 
 def get_status(server, site):
-    my_resolver = dns.resolver.Resolver()
-    my_resolver.nameservers = [str(server)]
-    answer = my_resolver.query(site)
-    return answer
+    try:
+        my_resolver = dns.resolver.Resolver()
+        my_resolver.nameservers = [str(server)]
+        my_resolver.timeout = 1
+        my_resolver.lifetime = 1
+        answer = my_resolver.query(site)
+        return 'resolves'
+    except Exception as e:
+        return "down"
 
 
 
